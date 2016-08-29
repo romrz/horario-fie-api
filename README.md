@@ -8,4 +8,4 @@ La API recibe la clave de la materia por medio de un parametro GET llamado 'subj
 http://api.horariofie.com/?subject=OC0400-T
 
 ## ¿Quieres contribuir?
-**¡Genial!** Echa un vistazo a como contribuir en [aquí](https://github.com/romrz/horario-fie/blob/master/CONTRIBUTING.md)
+**¡Genial!** Echa un vistazo a como contribuir en [aquí](https://github.com/romrz/horario-fie-api/blob/master/CONTRIBUTING.md)
