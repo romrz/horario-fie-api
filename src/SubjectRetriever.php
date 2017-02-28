@@ -6,7 +6,7 @@
 */
 class SubjectRetriever
 {
-    const URL = 'https://escolar.fie.umich.mx/actual/estudiante/materia-sig.php';
+    const URL = 'https://escolar.fie.umich.mx/20172017/estudiante/materia-sig.php';
 
     public static function get($subjectId)
     {
