@@ -21,7 +21,7 @@ header('Content-Type: application/json');
 
 $subject = $_GET['subject'];
 
-if($subject == 'all')
+if(!isset($subject) || $subject == 'all')
 {
 	echo SubjectRetriever::all();
 }
