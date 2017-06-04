@@ -11,10 +11,21 @@
 */
 
 include 'src/CurlPersistentConnection.php';
+include 'src/SubjectParser.php';
 include 'src/SubjectRetriever.php';
 
 // Allow requests from other domains
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET, POST');
+header('Content-Type: application/json');
 
-echo SubjectRetriever::get($_GET['subject']); 
+$subject = $_GET['subject'];
+
+if(!isset($subject) || $subject == 'all')
+{
+	echo SubjectRetriever::all();
+}
+else
+{
+	echo SubjectRetriever::get($subject); 
+}
