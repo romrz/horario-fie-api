@@ -17,7 +17,7 @@ include 'src/SubjectRetriever.php';
 // Allow requests from other domains
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET, POST');
-header('Content-Type: application/json');
+// header('Content-Type: application/json');
 
 $subject = $_GET['subject'];
 
