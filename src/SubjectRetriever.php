@@ -6,7 +6,7 @@
 */
 class SubjectRetriever
 {
-    const URL = 'https://escolar.fie.umich.mx/20172017/estudiante/materia-sig.php';
+    const URL = 'https://escolar.fie.umich.mx/actual/estudiante/materia-rom.php';
 
     public static function all()
     {
@@ -24,9 +24,10 @@ class SubjectRetriever
         $connection->post(self::URL, $fields); // Login request
         $html = $connection->post(self::URL, $fields); // Subject info request
 
-        $parser = new SubjectParser($html);
+        return $html;
+        // $parser = new SubjectParser($html);
 
-        return json_encode($parser->parseAll());
+        // return json_encode($parser->parseAll());
     }
 
     public static function get($subjectId)
