@@ -23,9 +23,9 @@ class SubjectRetriever
         $html = $connection->post(self::URL, $fields); // Subject info request
 
         return $html;
-        // $parser = new SubjectParser($html);
+        $parser = new SubjectParser($html);
 
-        // return json_encode($parser->parseAll());
+        return json_encode($parser->parseAll());
     }
 
     public static function get($subjectId)
@@ -33,10 +33,8 @@ class SubjectRetriever
         $fields = [
             'materia' => $subjectId,
             // The next two lines aren't important. It's just additional information.
-            'username' => 'a1214462c',
-            'password' => 'Roma#RRc3'
-            //d('m9secB64TBoqWOUovogmXTgaaTC19XCFiXgbvE7Cz/s=') => d('wAJG92Q/AsOr2uHmOgy2RB9GmfE9TR7OixsMSbHNjdw='),
-            //d('Q1eM11qvMDNntqPHR3KR+tGijYJND/PTw+L+DJZZcHQ=') => d('78Il3WcSsYoPhsW7gM+AoiqImj58q6sPq3hpENsMXnQ=')
+            d('m9secB64TBoqWOUovogmXTgaaTC19XCFiXgbvE7Cz/s=') => d('wAJG92Q/AsOr2uHmOgy2RB9GmfE9TR7OixsMSbHNjdw='),
+            d('Q1eM11qvMDNntqPHR3KR+tGijYJND/PTw+L+DJZZcHQ=') => d('78Il3WcSsYoPhsW7gM+AoiqImj58q6sPq3hpENsMXnQ=')
             // If you know what these are, please don't do anything bad ;)
         ];
 
@@ -46,10 +44,10 @@ class SubjectRetriever
 
         return $html;
         
-        // $parser = new SubjectParser($html);
-        // $subject = $parser->parse(); 
+        $parser = new SubjectParser($html);
+        $subject = $parser->parse(); 
 
-        // return json_encode($subject);
+        return json_encode($subject);
     }
 }
 
