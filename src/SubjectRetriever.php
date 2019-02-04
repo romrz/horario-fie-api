@@ -22,7 +22,6 @@ class SubjectRetriever
         $connection->post(self::URL, $fields); // Login request
         $html = $connection->post(self::URL, $fields); // Subject info request
 
-        return $html;
         $parser = new SubjectParser($html);
 
         return json_encode($parser->parseAll());
@@ -42,8 +41,6 @@ class SubjectRetriever
         $connection->post(self::URL, $fields); // Login request
         $html = $connection->post(self::URL, $fields); // Subject info request
 
-        return $html;
-        
         $parser = new SubjectParser($html);
         $subject = $parser->parse(); 
 
