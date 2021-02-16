@@ -6,7 +6,7 @@
 */
 class SubjectRetriever
 {
-    const URL = 'https://escolar.fie.umich.mx/20192020/estudiante/materia-rom.php';
+    const URL = 'https://escolar.fie.umich.mx/20212021/estudiante/materia-rom.php';
 
     public static function all()
     {
